@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Market Analysis</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <h1>Stock Market Analysis</h1>
+
+            <p>
+                Analyze stock prices, performance and company information
+            </p>
+
+        </header>
+
+
+        <!-- Main Layout -->
+        <main class="main-container">
+
+            <!-- LEFT SIDE -->
+            <section class="left-section">
+
+                <!-- Stock Chart Card -->
+                <div class="card chart-card">
+
+                    <div class="chart-header">
+
+                        <div>
+                            <h2 id="chartStockName">NVDA</h2>
+                            <p id="chartRangeText">5 Years</p>
+                        </div>
+
+                        <div class="range-buttons">
+
+                            <button
+                                class="range-btn"
+                                id="oneMonth">
+                                1 Month
+                            </button>
+
+                            <button
+                                class="range-btn"
+                                id="threeMonth">
+                                3 Months
+                            </button>
+
+                            <button
+                                class="range-btn"
+                                id="oneYear">
+                                1 Year
+                            </button>
+
+                            <button
+                                class="range-btn active"
+                                id="fiveYear">
+                                5 Years
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Chart -->
+                    <div class="chart-wrapper">
+
+                        <canvas id="stockChart"></canvas>
+
+                    </div>
+
+
+                    <!-- High / Low -->
+                    <div class="chart-stats">
+
+                        <div class="stat-box">
+
+                            <span class="stat-title">
+                                Peak Value
+                            </span>
+
+                            <strong id="peakValue">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stat-box">
+
+                            <span class="stat-title">
+                                Lowest Value
+                            </span>
+
+                            <strong id="lowestValue">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Stock Details -->
+                <div class="card details-card">
+
+                    <div class="details-header">
+
+                        <div>
+                            <p class="small-label">
+                                Selected Stock
+                            </p>
+
+                            <h2 id="stockName">
+                                NVDA
+                            </h2>
+                        </div>
+
+                        <div id="profitBadge" class="profit-badge">
+                            -
+                        </div>
+
+                    </div>
+
+
+                    <div class="details-grid">
+
+                        <div class="detail-item">
+
+                            <span>
+                                Book Value
+                            </span>
+
+                            <strong id="bookValue">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                Profit
+                            </span>
+
+                            <strong id="profit">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-section">
+
+                        <h3>
+                            Company Summary
+                        </h3>
+
+                        <p id="summary">
+                            Loading...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT SIDE -->
+            <aside class="right-section">
+
+                <div class="card stock-list-card">
+
+                    <div class="stock-list-header">
+
+                        <h2>
+                            Stocks
+                        </h2>
+
+                        <span id="stockCount">
+                            10 Stocks
+                        </span>
+
+                    </div>
+
+
+                    <div id="stockList">
+
+                        <!-- Stock buttons generated by JavaScript -->
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </main>
+
+    </div>
+
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Your JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
